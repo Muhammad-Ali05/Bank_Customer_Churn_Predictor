@@ -1,7 +1,5 @@
 import pandas as pd
 import streamlit as st
-import pickle
-import os
 import os
 import pickle
 # ---------------- PATH FIX ----------------
@@ -57,3 +55,6 @@ if st.button("🔮 Predict Churn"):
     with col3:
         st.subheader("SVM")
         st.success("Not Churn ✅" if svm_pred == 0 else "Churn ❌")
+
+
+        import os
