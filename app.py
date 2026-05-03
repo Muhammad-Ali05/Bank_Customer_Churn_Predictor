@@ -2,7 +2,14 @@ import pandas as pd
 import streamlit as st
 import pickle
 import os
+import os
+import pickle
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+nb_model = pickle.load(open(os.path.join(BASE_DIR, "nb_model.pkl"), "rb"))
+dt_model = pickle.load(open(os.path.join(BASE_DIR, "dt_model.pkl"), "rb"))
+svm_model = pickle.load(open(os.path.join(BASE_DIR, "svm_model.pkl"), "rb"))
 # ---------------- PATH FIX ----------------
 nb_model = pickle.load(open("nb_model.pkl", "rb"))
 dt_model = pickle.load(open("dt_model.pkl", "rb"))
