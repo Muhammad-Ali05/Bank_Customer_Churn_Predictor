@@ -4,20 +4,10 @@ import pickle
 import os
 import os
 import pickle
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-nb_model = pickle.load(open(os.path.join(BASE_DIR, "nb_model.pkl"), "rb"))
-dt_model = pickle.load(open(os.path.join(BASE_DIR, "dt_model.pkl"), "rb"))
-svm_model = pickle.load(open(os.path.join(BASE_DIR, "svm_model.pkl"), "rb"))
 # ---------------- PATH FIX ----------------
 nb_model = pickle.load(open("nb_model.pkl", "rb"))
 dt_model = pickle.load(open("dt_model.pkl", "rb"))
 svm_model = pickle.load(open("svm_model.pkl", "rb"))
-# ---------------- LOAD MODELS ----------------
-nb_model = pickle.load(open(os.path.join(BASE_DIR, "nb_model.pkl"), "rb"))
-dt_model = pickle.load(open(os.path.join(BASE_DIR, "dt_model.pkl"), "rb"))
-svm_model = pickle.load(open(os.path.join(BASE_DIR, "svm_model.pkl"), "rb"))
 
 # ---------------- UI ----------------
 st.set_page_config(page_title="Churn Predictor", layout="wide")
