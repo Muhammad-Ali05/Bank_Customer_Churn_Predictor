@@ -4,8 +4,9 @@ import pickle
 import os
 
 # ---------------- PATH FIX ----------------
-BASE_DIR = os.path.dirname(__file__)
-
+nb_model = pickle.load(open("nb_model.pkl", "rb"))
+dt_model = pickle.load(open("dt_model.pkl", "rb"))
+svm_model = pickle.load(open("svm_model.pkl", "rb"))
 # ---------------- LOAD MODELS ----------------
 nb_model = pickle.load(open(os.path.join(BASE_DIR, "nb_model.pkl"), "rb"))
 dt_model = pickle.load(open(os.path.join(BASE_DIR, "dt_model.pkl"), "rb"))
